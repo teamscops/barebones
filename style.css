@@ -1,9 +1,9 @@
 /*
-Theme Name: Barebones
+Theme Name: Scops WP Barebones
 Theme URI: http://scops.com/
 Author: Scops
-Author URI: https://scops.com
-Description: A slightly more balanced version of underscores.me
+Author URI: https://scops.com/
+Description: A WordPress barebones starter theme
 Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -13,7 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Barebones is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Scops Barebones is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -741,5 +741,27 @@ object {
 .gallery-caption {
   display: block; }
 
-.entry-footer span {
-  display: block; }
+#app {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.section {
+  width: 100%; }
+  .section-header {
+    background: #fafafa; }
+  .section-content {
+    background: #f5f5f5; }
+  .section-sidebar {
+    background: #555; }
+  .section-footer {
+    background: #333; }
+  .section .container {
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto; }

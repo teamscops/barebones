@@ -30,9 +30,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/forms";
 @import "components/wp-classes";
 
+@import "structure/structure";
+
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
-@import "layouts/tinymce";
