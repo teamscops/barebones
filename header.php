@@ -40,16 +40,18 @@
 					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="element main-navigation" role="navigation">
-						<div class="element-container">
+						<div class="menu-toggle-container">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'barebones' ); ?></button>
+						</div>
+						<div class="element-container">
 							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 						</div>
 					</nav><!-- #site-navigation -->
 
-			</header><!-- #masthead -->
-		</div>
-	</section>
+				</header><!-- #masthead -->
+			</div>
+		</section>
 
-	<section class="section section-content">
-		<div class="container">
-			<div id="content" class="site-content">
+		<section class="section section-content">
+			<div class="container">
+				<div id="content" class="site-content">

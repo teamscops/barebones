@@ -1,4 +1,4 @@
 // Fixed Button hack for proper admin view
-.admin-bar .menu-toggle {
+.admin-bar .menu-toggle-container {
 	top: calc(#{$mobile_menu__outer_margin} + 46px) !important;
 }
