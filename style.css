@@ -732,7 +732,12 @@ object {
   .section-sidebar {
     background: #EAEAEA; }
   .section-footer {
+    color: #6E6E6E;
     background: #333; }
+    .section-footer a {
+      color: #CDCDCD; }
+      .section-footer a:hover {
+        color: #f5f5f5; }
 
 .section-header {
   border-bottom: 1px solid #dfdfdf; }
@@ -948,6 +953,10 @@ body {
 
 .widget {
   padding: 40px; }
+
+.site-footer {
+  text-align: center;
+  padding: 100px 0; }
 
 .post {
   margin-top: 50px;

@@ -11,6 +11,13 @@
 		background: #EAEAEA;
 	}
 	&-footer {
+		color: #6E6E6E;
 		background: #333;
+		a {
+			color: #CDCDCD;
+			&:hover {
+				color: #f5f5f5;
+			}
+		}
 	}
 }
