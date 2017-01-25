@@ -509,7 +509,6 @@ a:active {
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -579,6 +578,9 @@ a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+.main-navigation ul {
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {
