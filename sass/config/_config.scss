@@ -1,0 +1,12 @@
+$app__max_width: 1200px;
+$app__margin: 50px;
+$app__container_width: 100%;
+
+$mobile__breakpoint: 480px;
+$tablet__breakpoint: 767px;
+$laptop__breakpoint: 1024px;
+$desktop__breakpoint: 1200px;
+
+$mobile_menu__breakpoint: $tablet__breakpoint;
+$mobile_menu__toggle_size: 50px;
+$mobile_menu__outer_margin: 40px;
