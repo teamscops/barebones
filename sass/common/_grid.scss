@@ -1,0 +1,19 @@
+.element {
+	&.is- {
+		width: 100%;
+		@media(min-width: 767px) {
+			&full {
+
+			}
+			&half {
+				max-width: 50%;
+			}
+			&third {
+				max-width: 33.333%;
+			}
+			&quarter {
+				max-width: 25%;
+			}
+		}
+	}
+}
