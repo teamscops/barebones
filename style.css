@@ -767,7 +767,7 @@ object {
   box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.2); }
   #app .container {
     max-width: 100%;
-    padding: 20px;
+    padding: 0 20px;
     margin: 0 auto; }
   #app .section {
     width: 100%; }
