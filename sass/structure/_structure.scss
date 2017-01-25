@@ -1,29 +1,25 @@
+body {
+	@media screen and (min-width: $tablet__breakpoint) {
+		margin: $app__margin;
+	}
+}
+
 #app {
 	width: 100%;
-	//max-width: 1280px;
-	//padding: 100px;
+	max-width: $app__max_width;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-}
-.section {
-	width: 100%;
-
-	&-header {
-		background: #fafafa;
-	}
-	&-content {
-		background: #f5f5f5;
-	}
-	&-sidebar {
-		background: #555;
-	}
-	&-footer {
-		background: #333;
-	}
+	box-shadow: 0px 2px 50px rgba(0,0,0,0.2);
 
 	.container {
-		max-width: 960px;
+		max-width: $app__container_width;
 		padding: 20px;
 		margin: 0 auto;
+	}
+	.section {
+		width: 100%;
 	}
 }

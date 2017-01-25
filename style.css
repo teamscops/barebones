@@ -453,17 +453,14 @@ a:active {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
 
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
   padding-left: 0; }
 
 .main-navigation li {
-  float: left;
   position: relative; }
 
 .main-navigation a {
@@ -472,7 +469,6 @@ a:active {
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
   position: absolute;
   top: 1em;
   left: -999em;
@@ -493,35 +489,21 @@ a:active {
 .main-navigation ul ul li.focus > ul {
   left: 100%; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
   margin: 0 0 1em;
   overflow: hidden; }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+.site-main .comment-navigation .nav-links,
+.site-main .posts-navigation .nav-links,
+.site-main .post-navigation .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -741,16 +723,6 @@ object {
 .gallery-caption {
   display: block; }
 
-#app {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
 .section {
   width: 100%; }
   .section-header {
@@ -761,7 +733,135 @@ object {
     background: #555; }
   .section-footer {
     background: #333; }
-  .section .container {
-    max-width: 960px;
+
+.admin-bar .menu-toggle {
+  top: calc(40px + 46px) !important; }
+
+.element.is- {
+  width: 100%; }
+  @media (min-width: 767px) {
+    .element.is-half {
+      max-width: 50%; }
+    .element.is-third {
+      max-width: 33.333%; }
+    .element.is-quarter {
+      max-width: 25%; } }
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 50px; } }
+
+#app {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.2); }
+  #app .container {
+    max-width: 100%;
     padding: 20px;
     margin: 0 auto; }
+  #app .section {
+    width: 100%; }
+
+.site-header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%; }
+  @media (min-width: 767px) {
+    .site-header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .site-header .site-branding {
+    width: 100%; }
+  .site-header .main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .site-header .main-navigation .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      @media (min-width: 767px) {
+        .site-header .main-navigation .menu {
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end; } }
+    .site-header .main-navigation .menu-toggle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      height: 50px;
+      width: 50px; }
+      @media screen and (min-width: 767px) {
+        .site-header .main-navigation .menu-toggle {
+          display: none; } }
+    .site-header .main-navigation ul.nav-menu {
+      display: none; }
+      @media screen and (min-width: 767px) {
+        .site-header .main-navigation ul.nav-menu {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+      .site-header .main-navigation ul.nav-menu li a {
+        line-height: 2; }
+        @media screen and (min-width: 767px) {
+          .site-header .main-navigation ul.nav-menu li a {
+            padding: 0 10px; } }
+    .site-header .main-navigation.toggled ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      @media (max-width: 767px) {
+        .site-header .main-navigation.toggled ul {
+          display: -webkit-box !important;
+          display: -ms-flexbox !important;
+          display: flex !important;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; } }
+    @media (max-width: 767px) {
+      .site-header .main-navigation ul ul {
+        box-shadow: none;
+        float: none;
+        position: initial;
+        top: 0;
+        left: 0;
+        padding-left: 20px; } }
