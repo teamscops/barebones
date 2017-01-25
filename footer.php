@@ -16,7 +16,7 @@
 	</section>
 
 	<section class="section section-sidebar">
-		<div class="container">
+		<div class="container collapse">
 			<?php get_sidebar(); ?>
 		</div>
 	</section>
