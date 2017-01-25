@@ -1,11 +1,11 @@
-$app__max_width: 1400px;
-$app__margin: 50px;
+$app__max_width: 100%;
+$app__margin: 0px;
 $app__background: #dfdfdf;
 $app__shadow: 0px 2px 50px rgba(0,0,0,0.2);
-$app__container_width: 100%;
+$app__container_width: 1280px;
 $app__content_width: 800px;
 
-$header__h_padding: 30px;
+$header__h_padding: 20px;
 
 $mobile__breakpoint: 480px;
 $tablet__breakpoint: 767px;
@@ -13,7 +13,7 @@ $laptop__breakpoint: 1024px;
 $desktop__breakpoint: 1200px;
 
 $mobile_menu__breakpoint: $tablet__breakpoint;
-$mobile_menu__toggle_size: 100px;
+$mobile_menu__toggle_size: 80px;
 $mobile_menu__outer_margin: 0px;
 
 

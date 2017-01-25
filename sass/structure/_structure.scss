@@ -29,13 +29,6 @@ body {
 	.content-area {
 		max-width: $app__content_width;
 		margin: 0 auto;
-		padding: 50px 0;
-		@media(min-width: $mobile__breakpoint) {
-			padding: 50px 0;
-		}
-		@media(min-width: $desktop__breakpoint) {
-			padding: 100px 0;
-		}
 		p {
 			margin-bottom: 1.5em;
 		}

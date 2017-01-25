@@ -18,20 +18,22 @@
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'barebones' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+		<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'barebones' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
-		<?php elseif ( is_search() ) : ?>
+	<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'barebones' ); ?></p>
-			<?php
-				get_search_form();
+		<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'barebones' ); ?></p>
+		<div class="element element-search-form">
+			<?php get_search_form(); ?>
+		</div>
+		
+	<?php else : ?>
 
-		else : ?>
+		<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'barebones' ); ?></p>
+		<div class="element element-search-form">
+			<?php get_search_form(); ?>
+		</div>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'barebones' ); ?></p>
-			<?php
-				get_search_form();
-
-		endif; ?>
-	</div><!-- .page-content -->
+	<?php endif; ?>
+</div><!-- .page-content -->
 </section><!-- .no-results -->
