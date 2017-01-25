@@ -107,6 +107,8 @@ add_action( 'widgets_init', 'barebones_widgets_init' );
 function barebones_scripts() {
 	wp_enqueue_style( 'barebones-style', get_stylesheet_uri() );
 
+	wp_enqueue_style('barebones-google-fonts', barebones_fonts_url(), array(), null);
+
 	wp_enqueue_script( 'barebones-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'barebones-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -135,7 +137,8 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/library/customizer/customizer.php';
+require get_template_directory() . '/library/customizer/google-fonts/google-fonts.php';
 
 /**
  * Load Jetpack compatibility file.
