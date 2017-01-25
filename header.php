@@ -26,24 +26,30 @@
 		<section class="section section-header">
 			<div class="container">
 				<header id="masthead" class="site-header" role="banner">
-					<div class="site-branding">
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-						$description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-						<?php
-						endif; ?>
+
+					<div class="element site-branding is-third">
+						<div class="element-container">
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<?php
+							$description = get_bloginfo( 'description', 'display' );
+							if ( $description || is_customize_preview() ) : ?>
+							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+							<?php
+							endif; ?>
+						</div>
 					</div><!-- .site-branding -->
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'barebones' ); ?></button>
-						<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+					<nav id="site-navigation" class="element main-navigation" role="navigation">
+						<div class="element-container">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'barebones' ); ?></button>
+							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+						</div>
 					</nav><!-- #site-navigation -->
-				</header><!-- #masthead -->
-			</div>
-		</section>
 
-		<section class="section section-content">
-			<div class="container">
-				<div id="content" class="site-content">
+			</header><!-- #masthead -->
+		</div>
+	</section>
+
+	<section class="section section-content">
+		<div class="container">
+			<div id="content" class="site-content">

@@ -1,0 +1,74 @@
+
+.site-header {
+	flex-direction: column;
+	width: 100%;
+	@media(min-width: $mobile_menu__breakpoint) {
+		flex-direction: row;
+		align-items: center;
+		display: flex;
+	}
+
+	.site-branding {
+		width: 100%;
+	}
+
+	.main-navigation {
+		display: flex;
+		flex-direction: column;
+
+		.menu {
+			display: flex;
+			@media(min-width: $mobile_menu__breakpoint) {
+				justify-content: flex-end;
+			}
+		}
+
+		.menu-toggle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: $mobile_menu__outer_margin;
+			right: $mobile_menu__outer_margin;
+			height: $mobile_menu__toggle_size;
+			width: $mobile_menu__toggle_size;
+			@media screen and (min-width: $mobile_menu__breakpoint) {
+				display: none;
+			}
+		}
+
+		ul.nav-menu {
+			display: none;
+			@media screen and (min-width: $mobile_menu__breakpoint) {
+				display: flex;
+				justify-content: flex-end;
+				flex-wrap: wrap;
+			}
+			li a {
+				line-height: 2;
+				@media screen and (min-width: $mobile_menu__breakpoint) {
+					padding: 0 10px;
+				}
+			}
+		}
+
+		&.toggled ul {
+			display: flex;
+			@media(max-width: $mobile_menu__breakpoint) {
+				display: flex !important;
+				flex-direction: column;
+			}
+		}
+
+		ul ul {
+			@media(max-width: $mobile_menu__breakpoint) {
+				box-shadow: none;
+				float: none;
+				position: initial;
+				top: 0;
+				left: 0;
+				padding-left: 20px;
+			}
+		}
+	}
+}
