@@ -106,7 +106,6 @@ add_action( 'widgets_init', 'barebones_widgets_init' );
  */
 function barebones_scripts() {
 	wp_enqueue_style( 'barebones-style', get_stylesheet_uri() );
-
 	wp_enqueue_style('barebones-google-fonts', barebones_fonts_url(), array(), null);
 
 	wp_enqueue_script( 'barebones-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -118,6 +117,11 @@ function barebones_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'barebones_scripts' );
+
+/**
+ * Rest Api
+ */
+require get_template_directory() . '/inc/api.php';
 
 /**
  * Implement the Custom Header feature.

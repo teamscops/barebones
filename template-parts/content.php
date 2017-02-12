@@ -9,8 +9,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('grid'); ?>>
+	<header class="entry-header element is-half">
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -26,22 +26,23 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content element is-half">
 		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'barebones' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		the_content( sprintf(
+			/* translators: %s: Name of current post. */
+			wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'barebones' ), array( 'span' => array( 'class' => array() ) ) ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'barebones' ),
-				'after'  => '</div>',
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'barebones' ),
+			'after'  => '</div>',
 			) );
-		?>
-	</div><!-- .entry-content -->
+			?>
+			<footer class="entry-footer">
+				<?php barebones_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php barebones_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+		
+	</article><!-- #post-## -->

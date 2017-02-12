@@ -18,6 +18,10 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
+	flex: 1 0 100%;
+	@media(max-width: $mobile_menu__breakpoint) {
+
+	}
 	@media(min-width: $mobile_menu__breakpoint) {
 		flex-direction: row;
 		align-items: center;

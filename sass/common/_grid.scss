@@ -15,25 +15,41 @@
 	}
 }
 .element {
-	width: 100%;
-	&.is- {
+	&.is-half,
+	&.is-third,
+	&.is-quarter {
+		width: 100%;
 		@media(min-width: $mobile__breakpoint) {
-			&half,
-			&third,
-			&quarter {
+			.section-sidebar & {
 				max-width: 50%;
+				flex: 1 0 50%;
 			}
 		}
-		@media(min-width: $desktop__breakpoint) {
-			&half {
+		@media(min-width: $tablet__breakpoint) {
+			.section-content & {
 				max-width: 50%;
-			}
-			&third {
-				max-width: 33.333%;
-			}
-			&quarter {
-				max-width: 25%;
+				flex: 1 0 50%;
 			}
 		}
 	}
+	@media(min-width: $tablet__breakpoint) {
+		&.is-third,
+		&.is-quarter {
+			.section-content &,
+			.section-sidebar & {
+				max-width: 33.333%;
+				flex: 1 0 33.333%;
+			}
+		}
+	}
+	@media(min-width: $desktop__breakpoint) {
+		&.is-quarter {
+			.section-content &,
+			.section-sidebar & {
+				max-width: 25%;
+				flex: 1 0 25%;
+			}
+		}
+	}
+
 }

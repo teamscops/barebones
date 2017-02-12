@@ -25,12 +25,17 @@ body {
 	}
 	.section {
 		width: 100%;
+		&-content {
+			.container {
+				background: $app__content_background;
+			}
+		}
 	}
 	.content-area {
 		max-width: $app__content_width;
 		margin: 0 auto;
 		p {
-			margin-bottom: 1.5em;
+			margin-bottom: 1em;
 		}
 	}
 }
