@@ -12,7 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('grid'); ?>>
 	
 	<?php if (has_post_thumbnail()) :?>
-		<div class="post-image element" style="<?php post_cover_image('post-thumb-index'); ?>"></div>
+		<div class="post-image element" style="<?php //post_cover_image('post-thumb-index'); // add .cover css class ?>">
+			<?php the_post_thumbnail('post-thumb-index'); ?>
+		</div>
 	<?php endif; ?>
 
 	<div class="post-content element">
@@ -33,18 +35,6 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-			<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'barebones' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'barebones' ),
-				'after'  => '</div>',
-				) );
-				?>
 				<footer class="entry-footer">
 					<?php barebones_entry_footer(); ?>
 				</footer><!-- .entry-footer -->

@@ -4,12 +4,14 @@ $app__margin: 20px;
 $app__background: #dfdfdf;
 $app__shadow: 0px 2px 50px rgba(0,0,0,0.2);
 $app__container_width: 1200px;
-$app__content_width: 800px;
+$app__content_width: 1200px;
 $app__content_background: none;
 $app__section_padding: 0;
 
 $header__container_width: 1200px;
 
+$article__content_width: 800px;
+$article__home_content_width: 600px;
 // Responsive
 $mobile__breakpoint: 480px;
 $tablet__breakpoint: 767px;

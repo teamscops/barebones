@@ -1,6 +1,16 @@
+.home.blog {
+	.type-post {
+		max-width: $article__home_content_width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 .type-post {
 	margin-top: 30px;
 	margin-bottom: 60px;
+	max-width: $article__content_width;
+	margin-left: auto;
+	margin-right: auto;
 	@media(min-width: $laptop__breakpoint){
 		margin-top: 100px;
 		margin-bottom: 100px;
@@ -8,11 +18,15 @@
 }
 .post-image {
 	display: flex;
-	overflow: hidden;
 	margin-bottom: 20px !important;
-	background: #333;
 	border-radius: 5px;
-	overflow: hidden;
+	img {
+		overflow: hidden;
+		border-radius: 5px;
+		align-self: flex-start;
+	}
+}
+.post-image.cover {
 	height: 200px;
 	width: 100%;
 	@media(min-width: $mobile__breakpoint){
@@ -20,8 +34,5 @@
 	}
 	@media(min-width: $laptop__breakpoint){
 		height: 400px;
-	}
-	img {
-		align-self: flex-start;
 	}
 }

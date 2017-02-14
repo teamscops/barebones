@@ -12,7 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('grid'); ?>>
 	
 	<?php if (has_post_thumbnail()) :?>
-		<div class="post-image element" style="<?php post_cover_image('post-thumb-index'); ?>"></div>
+		<div class="post-image element" style="<?php //post_cover_image('post-thumb-index'); // add .cover css class ?>">
+			<?php the_post_thumbnail('post-thumb-index'); ?>
+		</div>
 	<?php endif; ?>
 
 	<div class="post-content element <?php echo has_post_thumbnail() ? '' : ''; ?>">

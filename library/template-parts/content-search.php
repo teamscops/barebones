@@ -18,11 +18,12 @@
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<?php if ( 'post' === get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php barebones_posted_on(); ?>
-				</div><!-- .entry-meta -->
+			<?php if (has_post_thumbnail()) :?>
+				<div class="post-image element" style="<?php //post_cover_image('post-thumb-index'); // add .cover css class ?>">
+					<?php the_post_thumbnail('post-thumb-index'); ?>
+				</div>
 			<?php endif; ?>
+			
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">

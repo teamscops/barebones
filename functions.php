@@ -86,7 +86,7 @@ function barebones_content_width() {
 add_action( 'after_setup_theme', 'barebones_content_width', 0 );
 
 
-function post_cover_image($size) {
+function post_cover_image($size = '') {
 	$url = get_the_post_thumbnail_url(null, $size);
 	$cover_style = 'background: url('.$url.') no-repeat center center;';
 	$cover_style.= '-webkit-background-size: cover;';
