@@ -42,6 +42,8 @@ function barebones_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'post-thumb-index', 600, 600, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'barebones' ),
@@ -82,6 +84,17 @@ function barebones_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'barebones_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'barebones_content_width', 0 );
+
+
+function post_cover_image($size) {
+	$url = get_the_post_thumbnail_url(null, $size);
+	$cover_style = 'background: url('.$url.') no-repeat center center;';
+	$cover_style.= '-webkit-background-size: cover;';
+	$cover_style.= '-moz-background-size: cover;';
+	$cover_style.= '-o-background-size: cover;';
+	$cover_style.= 'background-size: cover;';
+	echo $cover_style;
+}
 
 /**
  * Register widget area.

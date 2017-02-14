@@ -18,7 +18,8 @@
 	&.is-half,
 	&.is-third,
 	&.is-two-thirds,
-	&.is-quarter {
+	&.is-quarter,
+	&.is-three-quarters {
 		width: 100%;
 		@media(min-width: $mobile__breakpoint) {
 			.section-sidebar & {
@@ -42,7 +43,8 @@
 				flex: 1 0 33.333%;
 			}
 		}
-		&.is-two-thirds {
+		&.is-two-thirds,
+		&.is-three-quarters {
 			.section-content &,
 			.section-sidebar & {
 				max-width: 66.666%;
@@ -58,6 +60,23 @@
 				flex: 1 0 25%;
 			}
 		}
+		&.is-three-quarters {
+			.section-content &,
+			.section-sidebar & {
+				max-width: 75%;
+				flex: 1 0 75%;
+			}
+		}
 	}
-
+	@media(min-width: $tablet__breakpoint) {
+		&.padding {
+			padding: 0 20px;
+		}
+		&.padding-left {
+			padding-left: 20px;
+		}
+		&.padding-right {
+			padding-right: 20px;
+		}
+	}
 }

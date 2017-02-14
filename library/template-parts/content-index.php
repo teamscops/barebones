@@ -15,7 +15,7 @@
 		<div class="post-image element" style="<?php post_cover_image('post-thumb-index'); ?>"></div>
 	<?php endif; ?>
 
-	<div class="post-content element <?php echo has_post_thumbnail() ? '' : ''; ?>">
+	<div class="post-content element">
 		<header class="entry-header">
 			<?php
 			if ( is_single() ) :
