@@ -734,15 +734,6 @@ h1, h2, h3, h4, h5, h6 {
     .footer a:hover {
       color: #f5f5f5; }
 
-.header {
-  border-bottom: 1px solid #dfdfdf; }
-
-.menu-toggle-container {
-  border-left: 1px solid #dfdfdf; }
-
-.widget {
-  border: 1px solid #dfdfdf; }
-
 .admin-bar .menu-toggle-container {
   top: calc(0px + 46px) !important; }
 
@@ -831,14 +822,12 @@ h1, h2, h3, h4, h5, h6 {
   .site-main .post-navigation .nav-links .nav-next {
     text-align: right; }
 
-.tag,
 .tags-links a {
   background: #ededed;
   padding: 2px 10px;
   margin: 0px 4px 4px 0px;
   border-radius: 4px;
   display: inline-block; }
-  .tag:hover,
   .tags-links a:hover {
     background: #d3d3d3; }
 
@@ -872,7 +861,7 @@ body {
 
 #app {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto;
@@ -885,7 +874,7 @@ body {
           flex-direction: column;
   box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.2); }
   #app .container {
-    max-width: 100%;
+    max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto; }
     #app .container.collapse {
@@ -895,7 +884,12 @@ body {
     padding-top: 0;
     padding-bottom: 0; }
     #app .section-content .container {
-      background: #fafafa; }
+      background: none; }
+    #app .section-sidebar {
+      padding: 30px 0px; }
+      @media (min-width: 1024px) {
+        #app .section-sidebar {
+          padding: 50px 0px; } }
   #app .site-content {
     min-height: 480px;
     display: -webkit-box;
@@ -915,8 +909,13 @@ body {
       margin-bottom: 1em; }
 
 .header .container {
-  padding-left: 40px !important;
-  padding-right: 40px !important; }
+  max-width: 1200px !important;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media (min-width: 1200px) {
+    .header .container {
+      padding-left: 40px !important;
+      padding-right: 40px !important; } }
 
 .menu-toggle,
 .site-branding,
@@ -1053,10 +1052,21 @@ body {
 .page-title {
   margin-top: 50px; }
 
-.type-page,
+.type-page {
+  margin-top: 30px;
+  margin-bottom: 60px; }
+  @media (min-width: 1024px) {
+    .type-page {
+      margin-top: 100px;
+      margin-bottom: 150px; } }
+
 .type-post {
-  margin-top: 50px;
-  margin-bottom: 100px; }
+  margin-top: 30px;
+  margin-bottom: 60px; }
+  @media (min-width: 1024px) {
+    .type-post {
+      margin-top: 100px;
+      margin-bottom: 100px; } }
 
 .comments-area {
   border-top: 1px solid #dfdfdf;

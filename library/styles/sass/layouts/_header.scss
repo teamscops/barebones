@@ -1,10 +1,14 @@
 .header {
 	.container {
-		padding-left: $header__h_padding !important;
-		padding-right: $header__h_padding !important;
+		max-width: $header__container_width !important;
+		padding-left: 20px;
+		padding-right: 20px;
+		@media(min-width: $desktop__breakpoint) {
+			padding-left: $header__h_padding !important;
+			padding-right: $header__h_padding !important;
+		}
 	}
 }
-
 
 .menu-toggle,
 .site-branding,
