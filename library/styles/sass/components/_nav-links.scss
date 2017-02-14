@@ -1,3 +1,11 @@
+.posts-navigation,
+.post-navigation {
+	margin-bottom: 0;
+	padding: 20px 0;
+	@media(min-width: 767px) {
+		padding: 50px 0;
+	}
+}
 .site-main .comment-navigation .nav-links,
 .site-main .posts-navigation .nav-links,
 .site-main .post-navigation .nav-links {

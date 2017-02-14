@@ -25,6 +25,8 @@ body {
 	}
 	.section {
 		width: 100%;
+		padding-top: $app__section_padding;
+		padding-bottom: $app__section_padding;
 		&-content {
 			.container {
 				background: $app__content_background;
@@ -38,6 +40,7 @@ body {
 		align-items: center;
 	}
 	.content-area {
+		width: 100%;
 		max-width: $app__content_width;
 		margin: 0 auto;
 		p {

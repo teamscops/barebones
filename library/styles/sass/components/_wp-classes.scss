@@ -1,3 +1,22 @@
 .element-search-form {
 	padding: 20px 0 50px 0;
 }
+.entry-meta,
+.entry-footer {
+	font-size: 80%;
+}
+
+.entry-footer {
+	display: flex;
+	flex-wrap: wrap;
+
+	.cat-links,
+	.tags-links {
+		width: 100%;
+		margin-bottom: 20px;
+		.tag-title {
+			display: inline-block;
+			margin-right: 6px;
+		}
+	}
+}

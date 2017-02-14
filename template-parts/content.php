@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('grid'); ?>>
-	<header class="entry-header element is-half">
+	<header class="entry-header element">
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -26,7 +26,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content element is-half">
+	<div class="entry-content element">
 		<?php
 		the_content( sprintf(
 			/* translators: %s: Name of current post. */

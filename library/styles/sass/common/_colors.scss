@@ -1,23 +1,23 @@
+.header {
+	background: #fafafa;
+}
 .section {
 	width: 100%;
 	
-	&-header {
-		background: #fafafa;
-	}
 	&-content {
 		background: #f5f5f5;
 	}
 	&-sidebar {
 		background: #EAEAEA;
 	}
-	&-footer {
-		color: #6E6E6E;
-		background: #333;
-		a {
-			color: #CDCDCD;
-			&:hover {
-				color: #f5f5f5;
-			}
+}
+.footer {
+	color: #6E6E6E;
+	background: #333;
+	a {
+		color: #CDCDCD;
+		&:hover {
+			color: #f5f5f5;
 		}
 	}
 }

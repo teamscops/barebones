@@ -17,6 +17,7 @@
 .element {
 	&.is-half,
 	&.is-third,
+	&.is-two-thirds,
 	&.is-quarter {
 		width: 100%;
 		@media(min-width: $mobile__breakpoint) {
@@ -39,6 +40,13 @@
 			.section-sidebar & {
 				max-width: 33.333%;
 				flex: 1 0 33.333%;
+			}
+		}
+		&.is-two-thirds {
+			.section-content &,
+			.section-sidebar & {
+				max-width: 66.666%;
+				flex: 1 0 66.666%;
 			}
 		}
 	}

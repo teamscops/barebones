@@ -23,7 +23,7 @@
 	<div id="app" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'barebones' ); ?></a>
 
-		<section class="section section-header">
+		<section class="header">
 			<div class="container">
 				<header id="masthead" class="site-header" role="banner">
 

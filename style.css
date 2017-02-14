@@ -713,23 +713,28 @@ object {
 .gallery-caption {
   display: block; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.header {
+  background: #fafafa; }
+
 .section {
   width: 100%; }
-  .section-header {
-    background: #fafafa; }
   .section-content {
     background: #f5f5f5; }
   .section-sidebar {
     background: #EAEAEA; }
-  .section-footer {
-    color: #6E6E6E;
-    background: #333; }
-    .section-footer a {
-      color: #CDCDCD; }
-      .section-footer a:hover {
-        color: #f5f5f5; }
 
-.section-header {
+.footer {
+  color: #6E6E6E;
+  background: #333; }
+  .footer a {
+    color: #CDCDCD; }
+    .footer a:hover {
+      color: #f5f5f5; }
+
+.header {
   border-bottom: 1px solid #dfdfdf; }
 
 .menu-toggle-container {
@@ -758,16 +763,16 @@ object {
     width: 100%;
     margin: 0 -1px -1px 0; }
 
-.element.is-half, .element.is-third, .element.is-quarter {
+.element.is-half, .element.is-third, .element.is-two-thirds, .element.is-quarter {
   width: 100%; }
   @media (min-width: 480px) {
-    .section-sidebar .element.is-half, .section-sidebar .element.is-third, .section-sidebar .element.is-quarter {
+    .section-sidebar .element.is-half, .section-sidebar .element.is-third, .section-sidebar .element.is-two-thirds, .section-sidebar .element.is-quarter {
       max-width: 50%;
       -webkit-box-flex: 1;
           -ms-flex: 1 0 50%;
               flex: 1 0 50%; } }
   @media (min-width: 767px) {
-    .section-content .element.is-half, .section-content .element.is-third, .section-content .element.is-quarter {
+    .section-content .element.is-half, .section-content .element.is-third, .section-content .element.is-two-thirds, .section-content .element.is-quarter {
       max-width: 50%;
       -webkit-box-flex: 1;
           -ms-flex: 1 0 50%;
@@ -780,7 +785,13 @@ object {
     max-width: 33.333%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 33.333%;
-            flex: 1 0 33.333%; } }
+            flex: 1 0 33.333%; }
+  .section-content .element.is-two-thirds,
+  .section-sidebar .element.is-two-thirds {
+    max-width: 66.666%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 66.666%;
+            flex: 1 0 66.666%; } }
 
 @media (min-width: 1200px) {
   .section-content .element.is-quarter,
@@ -789,6 +800,15 @@ object {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 25%;
             flex: 1 0 25%; } }
+
+.posts-navigation,
+.post-navigation {
+  margin-bottom: 0;
+  padding: 20px 0; }
+  @media (min-width: 767px) {
+    .posts-navigation,
+    .post-navigation {
+      padding: 50px 0; } }
 
 .site-main .comment-navigation .nav-links,
 .site-main .posts-navigation .nav-links,
@@ -811,18 +831,48 @@ object {
   .site-main .post-navigation .nav-links .nav-next {
     text-align: right; }
 
+.tag,
+.tags-links a {
+  background: #ededed;
+  padding: 2px 10px;
+  margin: 0px 4px 4px 0px;
+  border-radius: 4px;
+  display: inline-block; }
+  .tag:hover,
+  .tags-links a:hover {
+    background: #d3d3d3; }
+
 .element-search-form {
   padding: 20px 0 50px 0; }
+
+.entry-meta,
+.entry-footer {
+  font-size: 80%; }
+
+.entry-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .entry-footer .cat-links,
+  .entry-footer .tags-links {
+    width: 100%;
+    margin-bottom: 20px; }
+    .entry-footer .cat-links .tag-title,
+    .entry-footer .tags-links .tag-title {
+      display: inline-block;
+      margin-right: 6px; }
 
 body {
   background: #dfdfdf; }
   @media screen and (min-width: 767px) {
     body {
-      margin: 0px; } }
+      margin: 20px; } }
 
 #app {
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto;
@@ -841,7 +891,9 @@ body {
     #app .container.collapse {
       padding: 0 !important; }
   #app .section {
-    width: 100%; }
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0; }
     #app .section-content .container {
       background: #fafafa; }
   #app .site-content {
@@ -856,14 +908,15 @@ body {
         -ms-flex-align: center;
             align-items: center; }
   #app .content-area {
-    max-width: 1000px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto; }
     #app .content-area p {
       margin-bottom: 1em; }
 
-.section-header .container {
-  padding-left: 20px !important;
-  padding-right: 20px !important; }
+.header .container {
+  padding-left: 40px !important;
+  padding-right: 40px !important; }
 
 .menu-toggle,
 .site-branding,
@@ -1003,7 +1056,7 @@ body {
 .type-page,
 .type-post {
   margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-bottom: 100px; }
 
 .comments-area {
   border-top: 1px solid #dfdfdf;
